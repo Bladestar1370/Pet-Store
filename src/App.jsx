@@ -1,6 +1,8 @@
 import React, { useState } from 'react';  // Import the useState hook
 import './App.css';
 import { Navbar } from './Components/Navbar/Navbar';
+import { Slider } from './Components/Slider/Slider';
+import {Category} from './Components/Category/Category';
 
 function App() {
   // Create the cartCount state in the parent component (App)
@@ -14,8 +16,9 @@ function App() {
   return (
     <div>
       <Navbar cartCount={cartCount} />                                      {/* Pass the cartCount as a prop to Navbar */}
-
-     {/*<button onClick={addItemToCart}>Add Item to Cart</button>   */ }            {/* Example button to simulate adding items to the cart */}
+      <Slider />
+      <Category />
+    {/*<button onClick={addItemToCart}>Add Item to Cart</button>   */ }           {/* Example button to simulate adding items to the cart */}
     </div>
   );
 }

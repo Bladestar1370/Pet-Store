@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 #header {
     display: flex;
     align-items: center;
@@ -81,8 +83,8 @@ img {
 }
 
 .cart-count {
-    width: 22px;  /* Size of the count bubble */
-    height: 22px;  /* Size of the count bubble */
+    width: 20px;  /* Size of the count bubble */
+    height: 20px;  /* Size of the count bubble */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,9 +93,48 @@ img {
     right: 5px;  /* Adjust to place it to the right of the cart icon */
     border-radius: 50%;  /* Round shape */
     font-size: 14px;
-    background-color: red;  /* Background color for the count */
+    background-color: rgb(255, 81, 0);  /* Background color for the count */
     color: white;  /* Text color */
     padding: 2px;  /* Add padding for spacing around the number */
     text-align: center;  /* Center text in the bubble */
+    font-family: 'Roboto', sans-serif;
   }
   
+    /* Panel Section  */
+
+    .panel {
+        height: 39px;
+        display: flex;
+        align-items: center;
+        background-color: #1E3A8A;
+        box-shadow: 0px 5px 15px rgba(12, 12, 12, 0.5);
+     
+        
+     }
+     
+     .panel-all {
+         font-weight: 700px;
+         color: white;
+     }
+     
+     .panel-ops p {
+         display: inline;
+         margin-left: 13px;
+         color: #ffffff;
+         font-size: 16px;
+         margin: 10px 0;
+         transition: color 0.3s ease;
+     }
+     
+     .panel-ops p:hover {
+         color: #f1f52c;
+         cursor: pointer;
+     }
+     
+     .panel-ops {
+         width: 90%;
+         display: flex;
+         justify-content: space-around;
+     }
+
+    

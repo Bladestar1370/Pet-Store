@@ -5,6 +5,7 @@ import logo from '../Assets/logo1.jpg';
 
 export const Navbar = ({ cartCount }) => { // Accept cartCount as a prop
   return (
+    <header>
     <section id="header">
       <div className="logo">   
         <a href="#"><img src={logo} width="100" alt="Logo" /></a>
@@ -24,13 +25,10 @@ export const Navbar = ({ cartCount }) => { // Accept cartCount as a prop
           </li>
           <li className="border">
             <a href="Cart.html">
-              <i className="fa-solid fa-cart-shopping"></i>
-            {/* Cart count displayed here */}
-            {cartCount > 0 && (
-              <span className="cart-count">{cartCount}</span>
-            )}
-            </a>
-          </li>
+            <i className="fa-solid fa-cart-shopping"></i>
+                <span className="cart-count">{cartCount}</span> {/* Always show count */}
+              </a>
+            </li>
           <li className="border">
             <a href="Profile.html">
               <i className="fa-regular fa-user"></i>
@@ -39,5 +37,19 @@ export const Navbar = ({ cartCount }) => { // Accept cartCount as a prop
         </ul>
       </div>
     </section>
+    <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p>Toys Sale</p>
+                <p>Dogs</p>
+                <p>Cats</p>
+                <p>Small Animals</p>
+                <p>Pharmacy</p>
+            </div>
+        </div>
+    </header>
   );
 };
