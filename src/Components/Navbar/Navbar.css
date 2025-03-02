@@ -99,6 +99,43 @@ img {
     text-align: center;  /* Center text in the bubble */
     font-family: 'Roboto', sans-serif;
   }
+
+
+  .wishlist-count {  /* Add wishlist count styling */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    border-radius: 50%;
+    font-size: 14px;
+    background-color: rgb(255, 0, 102); /* Different color from cart */
+    color: white;
+    padding: 2px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .cart-count {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    border-radius: 50%;
+    font-size: 14px;
+    background-color: rgb(255, 81, 0);
+    color: white;
+    padding: 2px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
   
     /* Panel Section  */
 

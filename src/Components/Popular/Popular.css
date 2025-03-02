@@ -23,4 +23,6 @@
     margin-top: 50px;
     display: flex;
     gap: 30px;
+    justify-content: center;
+    align-items: stretch; /* Ensure items stretch to the same height */
 }

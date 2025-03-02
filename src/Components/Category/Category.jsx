@@ -1,5 +1,5 @@
-import './Category.css';
-import { Link } from 'react-router-dom'; // Assuming you're using React Router
+import "./Category.css";
+import { Link } from "react-router-dom"; // Assuming you're using React Router
 
 const categories = [
   { id: 1, name: "Dog", img: "/pets/dog.png", bgColor: "#f7b885" },
