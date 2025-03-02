@@ -1,48 +1,48 @@
 import React from 'react';
-import './Navbar.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './Navbar.css'; // Assuming you have styles for the Navbar
+import logo from '../Assets/logo1.jpg'; // Import your logo
 
-import logo from '../Assets/logo1.jpg';
-
-export const Navbar = ({ cartCount }) => { // Accept cartCount as a prop
+export const Navbar = ({ cartCount, addItemToCart }) => {
   return (
     <header>
-    <section id="header">
-      <div className="logo">   
-        <a href="#"><img src={logo} width="100" alt="Logo" /></a>
-      </div>
-      <div className="nav-search">
-        <input placeholder="Search here" className="search-input" />
-        <div className="search-icon">
-          <i className="fa-solid fa-magnifying-glass"></i>
+      <section id="header">
+        <div className="logo">
+          <a href="#"><img src={logo} width="100" alt="Logo" /></a>
         </div>
-      </div>
-      <div>
-        <ul id="navbar">
-          <li className="border">
-            <a href="Wishlist.html">
-              <i className="fa-regular fa-heart"></i>
-            </a>
-          </li>
-          <li className="border">
-            <a href="Cart.html">
-            <i className="fa-solid fa-cart-shopping"></i>
-                <span className="cart-count">{cartCount}</span> {/* Always show count */}
-              </a>
+        <div className="nav-search">
+          <input placeholder="Search here" className="search-input" />
+          <div className="search-icon">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div>
+          <ul id="navbar">
+            <li className="border">
+              <Link to="/wishlist" aria-label="Go to wishlist">
+                <i className="fa-regular fa-heart"></i>
+              </Link>
             </li>
-          <li className="border">
-            <a href="Profile.html">
-              <i className="fa-regular fa-user"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <div class="panel">
-            <div class="panel-all border">
-                <i class="fa-solid fa-bars"></i>
+            <li className="border">
+              <Link to="/cart" aria-label="Go to cart">
+                <i className="fa-solid fa-cart-shopping"></i>
+                <span className="cart-count">{cartCount}</span>
+              </Link>
+            </li>
+            <li className="border">
+              <Link to="/profile" aria-label="Go to profile">
+                <i className="fa-regular fa-user"></i>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div className="panel">
+            <div className="panel-all border">
+                <i className="fa-solid fa-bars"></i>
                 All
             </div>
-            <div class="panel-ops">
+            <div className="panel-ops">
                 <p>Toys Sale</p>
                 <p>Dogs</p>
                 <p>Cats</p>
