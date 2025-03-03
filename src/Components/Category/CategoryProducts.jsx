@@ -1,38 +1,38 @@
-// CategoryProducts.js
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import './CategoryProducts.css';
-import Item from '../Item/Item'; // Import the reusable Item component
-import allProducts from '../Assets/all_products'; // Import the data
-import { useCart } from '../CartContext/CartContext';
-
+// CategoryProducts.jsx
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import "./CategoryProducts.css";
+import Item from "../Item/Item"; // Adjust the path as needed
+import allProducts from "../Assets/all_products"; // Adjust the path as needed
 
 const CategoryProducts = () => {
   const { name } = useParams();
   const [products, setProducts] = useState([]);
-  const { addItemToCart, addItemToWishlist } = useCart(); // Get cart/wishlist functions from context
 
   useEffect(() => {
-    const filteredProducts = allProducts.filter(
-      (product) => product.category.toLowerCase().includes(name.toLowerCase())
+    const filteredProducts = allProducts.filter((product) =>
+      product.category.toLowerCase().includes(name.toLowerCase())
     );
     setProducts(filteredProducts);
   }, [name]);
 
   return (
-    <div>
+    <div className="category-products">
       <h2>{name.charAt(0).toUpperCase() + name.slice(1)} Products</h2>
       <div className="product-list">
         {products.map((product) => (
-          <Link key={product.id} to={`/product/${product.id}`} className="product-link">
+          <Link
+            key={product.id}
+            to={`/product/${product.id}`}
+            className="product-link"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             <Item
               id={product.id}
               name={product.name}
               image={product.image}
               new_price={product.new_price}
               old_price={product.old_price}
-              onAddToCart={addItemToCart}
-              onAddToWishlist={addItemToWishlist}
             />
           </Link>
         ))}
@@ -42,18 +42,6 @@ const CategoryProducts = () => {
 };
 
 export default CategoryProducts;
-
-
-
-
-
-
-
-
-
-
-
-
 
 // // CategoryProducts.js
 // import './CategoryProducts.css';
