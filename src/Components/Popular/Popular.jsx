@@ -21,9 +21,9 @@ export const Popular = () => {
               id={item.id}
               name={item.name}
               image={item.image}
+              category={item.category}
               new_price={item.new_price}
               old_price={item.old_price}
-              description={item.description || "No description available"} // Add description if available in data
             />
           </Link>
         ))}

@@ -1,16 +1,16 @@
+
 .item {
     width: 100%;
-    max-width: 320px; /* Adjusted size */
+    max-width: 320px; 
     margin: 20px;
-    height: auto;
+    height: 500px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.71);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    position: relative; /* Make the container relative for positioning buttons */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -18,25 +18,39 @@
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.706);
   }
-  
+
+  .item-content {
+    height: 450px;
+    
+  }
+ 
   .item img {
-    max-width: 100%;
+    border-radius: 20%;
+    width: 100%;
     height: 250px;
     object-fit: contain;
     border-radius: 8px;
+    border: 2px solid black;
   }
   
   .item-name {
     margin: 10px 0;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  width: 100%; 
   }
   
   .item-prices {
+    padding: 5px ;
     display: flex;
     gap: 20px;
+    width: 100%;
+    
 }
 
 .item-price-new {
@@ -51,20 +65,25 @@
     font-weight: 500;
     text-decoration: line-through;
 }
+
+.item-details h3 {
+    padding-bottom: 10px;
+    margin: 0;
+}
   
   .item-buttons {
-    position: absolute;
+    padding-top: 5px;
     display: flex;
-    gap: 12px; /* Increased gap for better button spacing */
+    gap: 50px;
     justify-content: center;
     width: 100%;
-    bottom: 15px; /* Adjusted to align at the bottom */
+    bottom: 15px;
   }
   
   .add-to-cart-btn {
     position: relative;
     display: inline-block;
-    padding: 15px 40px;
+    padding: 10px 30px;
     font-weight: bold;
     color: white;
     background: linear-gradient(45deg, #2196F3, #0D47A1);
@@ -94,8 +113,8 @@
   
   .add-to-cart-btn:hover {
     background-color: #45a049;
-    transform: translateY(-3px); /* Added lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better hover effect */
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
 
   .add-to-cart-btn:active {
@@ -111,98 +130,4 @@
   .add-to-wishlist-btn:active {
     transform: scale(0.9);
     box-shadow: 0 0 5px rgba(0, 191, 255, 0.6);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.item {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    height: 480px; /* Increased height to accommodate buttons 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item img {
-    max-width: 100%;
-    height: 250px;
-    object-fit: contain;
-}
-
-.item p {
-    margin: 6px 0px;
-}
-
-.item-prices {
-    display: flex;
-    gap: 20px;
-}
-
-.item-price-new {
-    color: #374151;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.item-price-old {
-    color: #8c8c8c;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: line-through;
-}
-
-.item-buttons {
-    display: flex;
-    gap: 10px;
-    margin: 10px 0;
-    justify-content: center;
-}
-
-.add-to-cart-btn, .add-to-wishlist-btn {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.add-to-cart-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.add-to-wishlist-btn {
-    background-color: #2196F3;
-    color: white;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #45a049;
-}
-
-.add-to-wishlist-btn:hover {
-    background-color: #1e88e5;
-}
-
-.item:hover {
-    transform: scale(1.05);
-    transition: 0.6s;
 }
