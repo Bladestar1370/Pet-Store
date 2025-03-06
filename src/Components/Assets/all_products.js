@@ -12,11 +12,12 @@ import p10_img from "./product_10.jpg";
 let all_product = [
   {
       id: 1,
-      name: "Depets Self Cleaning Slicker Brush, Pet Grooming Shedding Brush for Dogs and Cats - Easy to Remove Loose Undercoat, Pet Massaging Tool Suitable for Pets with Long or Short Hair Color May Vary",
+      name: "Depets Self Cleaning Slicker Brush",
       category: "Dog & Cat",
       image: p1_img,
       new_price: 176,
-      old_price: 399
+      old_price: 399,
+      description:"Pet Grooming Shedding Brush for Dogs and Cats - Easy to Remove Loose Undercoat, Pet Massaging Tool Suitable for Pets with Long or Short Hair Color May Vary"
   },
   {
       id: 2,

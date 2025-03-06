@@ -1,9 +1,9 @@
 // Navbar.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import logo from '../Assets/logo1.jpg';
-import { useCart } from '../CartContext/CartContext';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import logo from "../Assets/logo1.jpg";
+import { useCart } from "../CartContext/CartContext";
 
 export const Navbar = () => {
   const { cartCount, wishlistCount } = useCart(); // Get counts from context
@@ -12,7 +12,9 @@ export const Navbar = () => {
     <header>
       <section id="header">
         <div className="logo">
-          <a href="#"><img src={logo} width="100" alt="Logo" /></a>
+          <a href="#">
+            <img src={logo} width="100" alt="Logo" />
+          </a>
         </div>
         <div className="nav-search">
           <input placeholder="Search here" className="search-input" />
@@ -35,7 +37,7 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className="border">
-              <Link to="/profile" aria-label="Go to profile">
+              <Link to="/login" aria-label="Go to login/signup">
                 <i className="fa-regular fa-user"></i>
               </Link>
             </li>
@@ -58,21 +60,6 @@ export const Navbar = () => {
     </header>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React from 'react';
 // import { Link } from 'react-router-dom'; // Import Link from react-router-dom

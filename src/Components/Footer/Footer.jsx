@@ -1,7 +1,12 @@
-import React from 'react';
-import './Footer.css'; // Create this CSS file for styling
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faPinterest } from '@fortawesome/free-brands-svg-icons';
+import React from "react";
+import "./Footer.css"; // Create this CSS file for styling
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faPinterest,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
   return (
@@ -9,15 +14,26 @@ export const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>About Us</h3>
-          <p>We are dedicated to providing the best pet products for your furry friends. Shop with confidence!</p>
+          <p>
+            We are dedicated to providing the best pet products for your furry
+            friends. Shop with confidence!
+          </p>
         </div>
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/category">Categories</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category">Categories</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+            <li>
+              <a href="/privacy">Privacy Policy</a>
+            </li>
           </ul>
         </div>
         <div className="footer-section">

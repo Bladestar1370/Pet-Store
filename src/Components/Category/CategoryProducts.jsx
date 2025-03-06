@@ -31,6 +31,7 @@ const CategoryProducts = () => {
               id={product.id}
               name={product.name}
               image={product.image}
+              category={product.category}
               new_price={product.new_price}
               old_price={product.old_price}
             />

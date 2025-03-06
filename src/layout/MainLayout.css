@@ -1,0 +1,11 @@
+/* MainLayout.css */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  main {
+    flex: 1; /* Grows to push footer down */
+  }
+  

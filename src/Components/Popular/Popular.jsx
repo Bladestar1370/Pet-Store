@@ -11,19 +11,19 @@ export const Popular = () => {
       <h1>Popular Products</h1>
       <hr />
       <div className="popular-item">
-        {data_product.map((item) => (
+        {data_product.map((product) => (
           <Link
-            to={`/product/${item.id}`}
-            key={item.id}
+            to={`/product/${product.id}`}
+            key={product.id}
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <Item
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              category={item.category}
-              new_price={item.new_price}
-              old_price={item.old_price}
+              id={product.id}
+              name={product.name}
+              image={product.image}
+              category={product.category}
+              new_price={product.new_price}
+              old_price={product.old_price}
             />
           </Link>
         ))}
