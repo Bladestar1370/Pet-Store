@@ -1,5 +1,6 @@
 import React from "react";
 import "./Item.css";
+import { Link } from "react-router-dom";
 import { useCart } from "../CartContext/ShopContext"; // Import the context hook
 
 export const Item = (props) => {
@@ -20,7 +21,7 @@ export const Item = (props) => {
   return (
     <div className="item">
       <div className="item-content">
-        <img src={props.image} alt={props.name} />
+        <Link to={`/product/${props.id}`}><img src={props.image} alt={props.name} /></Link>
         <div className="item-details">
           <h3>{props.name}</h3>
           <p className="item-description">
