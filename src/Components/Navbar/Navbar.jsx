@@ -1,12 +1,14 @@
-// Navbar.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../Assets/logo1.jpg";
-import { useCart } from "../CartContext/CartContext";
 
 export const Navbar = () => {
-  const { cartCount, wishlistCount } = useCart(); // Get counts from context
+  // Remove the functionality for wishlist and cart
+  // By not assigning any values to wishlistCount and cartCount
+
+  const wishlistCount = 0;  // No functionality, set default value
+  const cartCount = 0;  // No functionality, set default value
 
   return (
     <header>
@@ -61,17 +63,32 @@ export const Navbar = () => {
   );
 };
 
-// import React from 'react';
-// import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-// import './Navbar.css'; // Assuming you have styles for the Navbar
-// import logo from '../Assets/logo1.jpg'; // Import your logo
 
-// export const Navbar = ({ cartCount, addItemToCart }) => {
+
+
+
+
+
+
+
+// // Navbar.jsx
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import "./Navbar.css";
+// import logo from "../Assets/logo1.jpg";
+
+
+
+// export const Navbar = () => {
+
+
 //   return (
 //     <header>
 //       <section id="header">
 //         <div className="logo">
-//           <a href="#"><img src={logo} width="100" alt="Logo" /></a>
+//           <a href="#">
+//             <img src={logo} width="100" alt="Logo" />
+//           </a>
 //         </div>
 //         <div className="nav-search">
 //           <input placeholder="Search here" className="search-input" />
@@ -84,6 +101,7 @@ export const Navbar = () => {
 //             <li className="border">
 //               <Link to="/wishlist" aria-label="Go to wishlist">
 //                 <i className="fa-regular fa-heart"></i>
+//                 <span className="wishlist-count">{wishlistCount}</span>
 //               </Link>
 //             </li>
 //             <li className="border">
@@ -93,7 +111,7 @@ export const Navbar = () => {
 //               </Link>
 //             </li>
 //             <li className="border">
-//               <Link to="/profile" aria-label="Go to profile">
+//               <Link to="/login" aria-label="Go to login/signup">
 //                 <i className="fa-regular fa-user"></i>
 //               </Link>
 //             </li>
@@ -101,18 +119,19 @@ export const Navbar = () => {
 //         </div>
 //       </section>
 //       <div className="panel">
-//             <div className="panel-all border">
-//                 <i className="fa-solid fa-bars"></i>
-//                 All
-//             </div>
-//             <div className="panel-ops">
-//                 <p>Toys Sale</p>
-//                 <p>Dogs</p>
-//                 <p>Cats</p>
-//                 <p>Small Animals</p>
-//                 <p>Pharmacy</p>
-//             </div>
+//         <div className="panel-all border">
+//           <i className="fa-solid fa-bars"></i>
+//           All
 //         </div>
+//         <div className="panel-ops">
+//           <p>Toys Sale</p>
+//           <p>Dogs</p>
+//           <p>Cats</p>
+//           <p>Small Animals</p>
+//           <p>Pharmacy</p>
+//         </div>
+//       </div>
 //     </header>
 //   );
 // };
+

@@ -7,15 +7,13 @@ import { MainLayout } from "./layout/MainLayout.jsx";
 import Category from "./Components/Category/Category.jsx";
 import CategoryProducts from "./Components/Category/CategoryProducts.jsx";
 import ProductDetails from "./page/ProductsDetails/ProductDetails.jsx";
-import { CartProvider } from "./Components/CartContext/CartContext.jsx";
+import {ShopContextProvider} from "../src/Components/CartContext/ShopContext.jsx";
 import { LoginSignUp } from "./page/Login/LoginSignup.jsx";
 import Cart from "./page/Cart/Cart.jsx";
-import { ToastContainer } from "react-toastify"; // Import ToastContainer
-import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 
 function App() {
   return (
-    <CartProvider>
+    <ShopContextProvider>
       <Router>
         <Routes>
           <Route element={<MainLayout />}>
@@ -28,7 +26,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
-    </CartProvider>
+    </ShopContextProvider>
   );
 }
 

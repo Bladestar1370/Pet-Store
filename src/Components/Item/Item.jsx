@@ -1,7 +1,6 @@
-// Item.jsx
 import React from "react";
 import "./Item.css";
-import { useCart } from "../CartContext/CartContext"; // Import the context hook
+import { useCart } from "../CartContext/ShopContext"; // Import the context hook
 
 export const Item = (props) => {
   const { addItemToCart, addItemToWishlist } = useCart(); // Access both functions from context
@@ -9,13 +8,13 @@ export const Item = (props) => {
   const handleCartClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    addItemToCart(props.id);
+    addItemToCart(props); // Pass the ENTIRE product object (props)
   };
 
   const handleWishlistClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    addItemToWishlist(props.id);
+    addItemToWishlist(props); // Pass the ENTIRE product object
   };
 
   return (
@@ -48,23 +47,3 @@ export const Item = (props) => {
 };
 
 export default Item;
-
-// import React from 'react'
-// import './Item.css'
-// export const Item = (props) => {
-//   return (
-//     <div className='item'>
-//         <img src={props.image} alt="" />
-//         <p>{props.name}</p>
-//         <div className="item-prices">
-//             <div className="item-price-new">
-//                 ${props.new_price}
-//             </div>
-//             <div className="item-price-old">
-//                 ${props.old_price}
-//             </div>
-//         </div>
-//     </div>
-//   )
-// }
-// export default Item;

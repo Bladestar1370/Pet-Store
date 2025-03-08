@@ -1,20 +1,22 @@
-// CategoryProducts.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./CategoryProducts.css";
 import Item from "../Item/Item"; // Adjust the path as needed
-import allProducts from "../Assets/all_products"; // Adjust the path as needed
+import { ShopContext } from "../CartContext/ShopContext"; // Import the context
 
 const CategoryProducts = () => {
   const { name } = useParams();
+  const { all_products: allProducts } = useContext(ShopContext); // Use context to get allProducts
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const filteredProducts = allProducts.filter((product) =>
-      product.category.toLowerCase().includes(name.toLowerCase())
-    );
-    setProducts(filteredProducts);
-  }, [name]);
+    if (allProducts) {
+      const filteredProducts = allProducts.filter((product) =>
+        product.category.toLowerCase().includes(name.toLowerCase())
+      );
+      setProducts(filteredProducts);
+    }
+  }, [name, allProducts]);
 
   return (
     <div className="category-products">
@@ -43,7 +45,6 @@ const CategoryProducts = () => {
 };
 
 export default CategoryProducts;
-
 // // CategoryProducts.js
 // import './CategoryProducts.css';
 // import React, { useState, useEffect } from 'react';

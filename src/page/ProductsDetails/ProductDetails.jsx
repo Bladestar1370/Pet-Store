@@ -1,15 +1,12 @@
-// ProductDetails.js
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import allProducts from "../../Components/Assets/all_products.js";
-import { useCart } from "../../Components/CartContext/CartContext.jsx";
+import { ShopContext } from "../../Components/CartContext/ShopContext.jsx";
 import "./ProductDetails.css";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const product = allProducts.find((p) => p.id === Number(id)); // Ensure it's a number
-  const { addItemToCart, addItemToWishlist, cart, wishlist } = useCart();
-  const [quantity, setQuantity] = useState(1);
+  const { all_products, addItemToCart, addItemToWishlist, cart, wishlist } = useContext(ShopContext);
+  const product = all_products.find((p) => p.id === Number(id)); // Ensure it's a number
 
   if (!product) {
     return (
@@ -22,8 +19,7 @@ const ProductDetails = () => {
   const handleAddToCart = () => {
     const itemInCart = cart.find((item) => item.id === product.id);
     if (!itemInCart) {
-      addItemToCart({ ...product, quantity });
-    } else {
+      addItemToCart(product);
     }
   };
 
@@ -31,7 +27,6 @@ const ProductDetails = () => {
     const itemInWishlist = wishlist.find((item) => item.id === product.id);
     if (!itemInWishlist) {
       addItemToWishlist(product);
-    } else {
     }
   };
 
@@ -48,17 +43,6 @@ const ProductDetails = () => {
           {product.old_price && (
             <span className="old-price">${product.old_price.toFixed(2)}</span>
           )}
-        </div>
-        <div className="quantity-selector">
-          <label>Quantity:</label>
-          <input
-            type="number"
-            value={quantity}
-            onChange={(e) =>
-              setQuantity(Math.max(1, parseInt(e.target.value) || 1)) // Ensures minimum quantity is 1
-            }
-            min="1"
-          />
         </div>
         <p className="description">
           {product.description || "A high-quality product for your pets."}
@@ -86,16 +70,19 @@ export default ProductDetails;
 
 
 
+
+
+// // ProductDetails.js
 // import React, { useState } from "react";
 // import { useParams, Link } from "react-router-dom";
 // import allProducts from "../../Components/Assets/all_products.js";
+// import { useCart } from "../../Components/CartContext/ShopContext.jsx";
 // import "./ProductDetails.css";
-// import { useCart } from "../../Components/CartContext/CartContext.jsx";
 
 // const ProductDetails = () => {
 //   const { id } = useParams();
-//   const product = allProducts.find((p) => p.id === parseInt(id));
-//   const { addItemToCart, addItemToWishlist } = useCart();
+//   const product = allProducts.find((p) => p.id === Number(id)); // Ensure it's a number
+//   const { addItemToCart, addItemToWishlist, cart, wishlist } = useCart();
 //   const [quantity, setQuantity] = useState(1);
 
 //   if (!product) {
@@ -107,13 +94,19 @@ export default ProductDetails;
 //   }
 
 //   const handleAddToCart = () => {
-//     addItemToCart({ ...product, quantity });
-//     alert(`${quantity} ${product.name}(s) added to cart!`);
+//     const itemInCart = cart.find((item) => item.id === product.id);
+//     if (!itemInCart) {
+//       addItemToCart({ ...product, quantity });
+//     } else {
+//     }
 //   };
 
 //   const handleAddToWishlist = () => {
-//     addItemToWishlist(product);
-//     alert(`${product.name} added to wishlist!`);
+//     const itemInWishlist = wishlist.find((item) => item.id === product.id);
+//     if (!itemInWishlist) {
+//       addItemToWishlist(product);
+//     } else {
+//     }
 //   };
 
 //   return (
@@ -135,7 +128,9 @@ export default ProductDetails;
 //           <input
 //             type="number"
 //             value={quantity}
-//             onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value)))}
+//             onChange={
+//               (e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1)) // Ensures minimum quantity is 1
+//             }
 //             min="1"
 //           />
 //         </div>
@@ -156,3 +151,4 @@ export default ProductDetails;
 // };
 
 // export default ProductDetails;
+
