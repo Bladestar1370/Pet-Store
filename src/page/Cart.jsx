@@ -1,6 +1,6 @@
 // Cart.jsx
 import React from "react";
-import { CartItems } from '../../Components/CartItems/CartItems.jsx';
+import { CartItems } from '../Components/CartItems/CartItems';
 const Cart = () => {
   return (
     <div>

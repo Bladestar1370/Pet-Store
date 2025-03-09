@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../Assets/logo1.jpg";
+import { ShopContext } from "../CartContext/ShopContext";
 
 export const Navbar = () => {
-  // Remove the functionality for wishlist and cart
-  // By not assigning any values to wishlistCount and cartCount
-
-  const wishlistCount = 0;  // No functionality, set default value
-  const cartCount = 0;  // No functionality, set default value
+  const {getTotalCartItems} = useContext(ShopContext);
 
   return (
     <header>
@@ -29,13 +26,13 @@ export const Navbar = () => {
             <li className="border">
               <Link to="/wishlist" aria-label="Go to wishlist">
                 <i className="fa-regular fa-heart"></i>
-                <span className="wishlist-count">{wishlistCount}</span>
+                <span className="wishlist-count"></span>
               </Link>
             </li>
             <li className="border">
               <Link to="/cart" aria-label="Go to cart">
                 <i className="fa-solid fa-cart-shopping"></i>
-                <span className="cart-count">{cartCount}</span>
+                <span className="cart-count">{getTotalCartItems()}</span>
               </Link>
             </li>
             <li className="border">
