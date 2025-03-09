@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    height: 90vh;
+    gap: 15px; /* Adjusted gap for better alignment */
+    height: auto; /* Adjusted height for better responsiveness */
 }
+
 
 .popular h1 {
     color: #171717;
@@ -20,8 +21,7 @@
 }
 
 .popular-item {
- 
     display: flex;
-    gap: 30px;
+    gap: 20px; /* Adjusted gap for better alignment */
     justify-content: center;
 }

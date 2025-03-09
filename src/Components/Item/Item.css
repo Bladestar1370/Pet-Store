@@ -1,4 +1,3 @@
-
 .item {
     width: 100%;
     max-width: 320px; 
@@ -10,47 +9,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 20px; /* Adjusted padding for better alignment */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .item:hover {
+}
+
+.item:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.706);
-  }
+}
 
-  .item-content {
+.item-content {
     height: 450px;
-    
-  }
- 
-  .item img {
+}
+
+.item img {
     border-radius: 20%;
     width: 100%;
     height: 250px;
     object-fit: contain;
     border-radius: 8px;
     border: 2px solid black;
-  }
-  
-  .item-name {
+}
+
+.item-name {
     margin: 10px 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  text-align: center;
-  overflow: hidden; 
-  text-overflow: ellipsis;
-  white-space: nowrap; 
-  width: 100%; 
-  }
-  
-  .item-prices {
-    padding: 5px ;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    width: 100%; 
+}
+
+.item-prices {
+    padding: 5px;
     display: flex;
-    gap: 20px;
+    gap: 10px; /* Adjusted gap for better alignment */
     width: 100%;
-    
 }
 
 .item-price-new {
@@ -70,17 +67,19 @@
     padding-bottom: 10px;
     margin: 0;
 }
-  
-  .item-buttons {
+
+.item-buttons {
     padding-top: 5px;
     display: flex;
-    gap: 50px;
+    gap: 10px; /* Adjusted gap for better alignment */
+
+
     justify-content: center;
     width: 100%;
     bottom: 15px;
-  }
-  
-  .add-to-cart-btn {
+}
+
+.add-to-cart-btn {
     position: relative;
     display: inline-block;
     padding: 10px 30px;
@@ -93,9 +92,9 @@
     transition: 0.3s ease-in-out;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(33, 150, 243, 0.6);
-  }
-  
-  .add-to-wishlist-btn {
+}
+
+.add-to-wishlist-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,25 +108,25 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
-  }
-  
-  .add-to-cart-btn:hover {
+}
+
+.add-to-cart-btn:hover {
     background-color: #45a049;
     transform: translateY(-3px); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  }
+}
 
-  .add-to-cart-btn:active {
+.add-to-cart-btn:active {
     transform: scale(0.95);
     box-shadow: 0 0 5px rgba(33, 150, 243, 0.6);
 }
-  
-  .add-to-wishlist-btn:hover {
+
+.add-to-wishlist-btn:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
-  }
+}
 
-  .add-to-wishlist-btn:active {
+.add-to-wishlist-btn:active {
     transform: scale(0.9);
     box-shadow: 0 0 5px rgba(0, 191, 255, 0.6);
 }

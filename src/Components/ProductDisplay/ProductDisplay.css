@@ -1,7 +1,8 @@
 .productdisplay {
     display: flex;
-    margin: 0px 170px;
+    margin: 0px 20px; /* Adjusted margin for better alignment */
 }
+
 
 .productdisplay-left {
     display:flex;
@@ -15,8 +16,9 @@
 }
 
 .productdisplay-img-list img {
-    height: 163px;
+    height: 200px; /* Adjusted height for better alignment */
 }
+
 
 .productdisplay-main-img {
     width: 580px;
@@ -25,9 +27,12 @@
 
 .productdisplay-right {
     display: flex;
-    margin: 0px 70px;
+    margin: 0px 10px; /* Adjusted margin for better alignment */
     flex-direction: column;
+    gap: 15px; /* Added gap for better spacing */
 }
+
+
 
 .productdisplay-right h1 {
     color: #3d3d3d;

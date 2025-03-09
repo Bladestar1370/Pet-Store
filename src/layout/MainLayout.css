@@ -5,7 +5,8 @@
     min-height: 100vh; /* Full viewport height */
   }
   
-  main {
+main {
     flex: 1; /* Grows to push footer down */
+    min-height: calc(100vh - 100px); /* Adjust based on footer height */
+
   }
-  

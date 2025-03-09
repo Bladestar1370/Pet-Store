@@ -14,7 +14,7 @@ export const Navbar = () => {
     <header>
       <section id="header">
         <div className="logo">
-          <a href="#">
+          <a href="/">
             <img src={logo} width="100" alt="Logo" />
           </a>
         </div>

@@ -1,6 +1,7 @@
 .section-p1 {
-    padding: 30px 40px;
+    padding: 20px 30px; /* Adjusted padding for better spacing */
 }
+
 
 #shop-by h2 {
     text-align: center;
@@ -20,7 +21,8 @@
 .by-pet {
     width: 180px;
     text-align: center;
-    padding: 25px 15px;
+    padding: 20px 10px; /* Adjusted padding for better alignment */
+
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
     border-radius: 10%;
     border: 1px solid #cce7d0;

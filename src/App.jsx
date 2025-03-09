@@ -6,8 +6,8 @@ import { Home } from "./page/Home.jsx";
 import { MainLayout } from "./layout/MainLayout.jsx";
 import Category from "./Components/Category/Category.jsx";
 import CategoryProducts from "./Components/Category/CategoryProducts.jsx";
-import ProductDetails from "./page/ProductsDetails/Product.jsx";
-import {ShopContextProvider} from "../src/Components/CartContext/ShopContext.jsx";
+import ProductDetails from "./page/Product.jsx";
+import { ShopContextProvider } from "../src/Components/CartContext/ShopContext.jsx";
 import { LoginSignUp } from "./page/Login/LoginSignup.jsx";
 import Cart from "./page/Cart/Cart.jsx";
 
