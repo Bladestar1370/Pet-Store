@@ -10,8 +10,10 @@
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
-  width: 200px;
+  width: 100%; /* Changed to responsive width */
+  max-width: 200px; /* Added max-width for better alignment */
 }
+
 
 .product-item img {
   max-width: 100%;

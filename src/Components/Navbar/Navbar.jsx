@@ -5,7 +5,7 @@ import logo from "../Assets/logo1.jpg";
 import { ShopContext } from "../CartContext/ShopContext";
 
 export const Navbar = () => {
-  const {getTotalCartItems} = useContext(ShopContext);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   return (
     <header>
@@ -60,24 +60,13 @@ export const Navbar = () => {
   );
 };
 
-
-
-
-
-
-
-
-
 // // Navbar.jsx
 // import React from "react";
 // import { Link } from "react-router-dom";
 // import "./Navbar.css";
 // import logo from "../Assets/logo1.jpg";
 
-
-
 // export const Navbar = () => {
-
 
 //   return (
 //     <header>
@@ -131,4 +120,3 @@ export const Navbar = () => {
 //     </header>
 //   );
 // };
-

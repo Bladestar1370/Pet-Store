@@ -19,8 +19,9 @@
 }
 
 .item-content {
-    height: 450px;
+    height: auto; /* Changed to auto for better responsiveness */
 }
+
 
 .item img {
     border-radius: 20%;

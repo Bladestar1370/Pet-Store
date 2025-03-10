@@ -1,7 +1,8 @@
 .productdisplay {
     display: flex;
-    margin: 0px 20px; /* Adjusted margin for better alignment */
+    margin: 0px 10px; /* Adjusted margin for better alignment */
 }
+
 
 
 .productdisplay-left {
@@ -27,10 +28,11 @@
 
 .productdisplay-right {
     display: flex;
-    margin: 0px 10px; /* Adjusted margin for better alignment */
+    margin: 0px 20px; /* Adjusted margin for better alignment */
     flex-direction: column;
     gap: 15px; /* Added gap for better spacing */
 }
+
 
 
 
