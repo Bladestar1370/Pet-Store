@@ -11,8 +11,17 @@ const getDefaultCart = () => {
   return cart;
 };
 
+const getDefaultWishlist = () => {
+  let wishlist = {};
+  for (let index = 0; index < allProducts.length; index++) {
+    wishlist[allProducts[index].id] = false;
+  }
+  return wishlist;
+};
+
 export const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [wishlistItems, setWishlistItems] = useState(getDefaultWishlist());
   const [all_products, setAllProducts] = useState([]);
 
   const addToCart = (itemId) => {
@@ -22,6 +31,14 @@ export const ShopContextProvider = ({ children }) => {
 
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) - 1 }));
+  };
+
+  const addToWishlist = (itemId) => {
+    setWishlistItems((prev) => ({ ...prev, [itemId]: true }));
+  };
+
+  const removeFromWishlist = (itemId) => {
+    setWishlistItems((prev) => ({ ...prev, [itemId]: false }));
   };
 
   const getTotalCartAmount = () => {
@@ -45,6 +62,16 @@ export const ShopContextProvider = ({ children }) => {
     return totalItem;
   };
 
+  const getTotalWishlistItems = () => {
+    let totalItem = 0;
+    for (const item in wishlistItems) {
+      if (wishlistItems[item]) {
+        totalItem += 1;
+      }
+    }
+    return totalItem;
+  };
+
   useEffect(() => {
     // Assuming allProducts is an array of products
     setAllProducts(allProducts);
@@ -53,10 +80,14 @@ export const ShopContextProvider = ({ children }) => {
   const contextValue = {
     getTotalCartItems,
     getTotalCartAmount,
+    getTotalWishlistItems,
     all_products,
     cartItems,
+    wishlistItems,
     addToCart,
     removeFromCart,
+    addToWishlist,
+    removeFromWishlist,
   };
 
   return (
@@ -67,5 +98,9 @@ export const ShopContextProvider = ({ children }) => {
 };
 
 export const useCart = () => {
+  return useContext(ShopContext);
+};
+
+export const useWishlist = () => {
   return useContext(ShopContext);
 };

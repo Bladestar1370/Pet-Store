@@ -23,6 +23,6 @@
 .popular-item {
     display: flex;
     flex-wrap: wrap; /* Added flex-wrap for better alignment */
-    gap: 20px; /* Adjusted gap for better alignment */
+    gap: 2px; /* Adjusted gap for better alignment */
     justify-content: center;
 }

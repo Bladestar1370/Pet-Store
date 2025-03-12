@@ -6,6 +6,7 @@ import { ShopContext } from "../CartContext/ShopContext";
 
 export const Navbar = () => {
   const { getTotalCartItems } = useContext(ShopContext);
+  const { getTotalWishlistItems } = useContext(ShopContext);
 
   return (
     <header>
@@ -26,7 +27,7 @@ export const Navbar = () => {
             <li className="border">
               <Link to="/wishlist" aria-label="Go to wishlist">
                 <i className="fa-regular fa-heart"></i>
-                <span className="wishlist-count"></span>
+                <span className="wishlist-count">{getTotalWishlistItems()}</span>
               </Link>
             </li>
             <li className="border">

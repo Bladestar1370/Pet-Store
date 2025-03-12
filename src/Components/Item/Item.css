@@ -1,8 +1,8 @@
 .item {
-    width: 100%;
+    width: 320px;
     max-width: 320px; 
     margin: 20px;
-    height: 500px;
+    height: auto; /* Changed to auto for better responsiveness */
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.71);
@@ -19,13 +19,12 @@
 }
 
 .item-content {
-    height: auto; /* Changed to auto for better responsiveness */
+    width: 100%; /* Ensured the content takes the full width */
 }
-
 
 .item img {
     border-radius: 20%;
-    width: 100%;
+    width: 100%; /* Adjusted width for better responsiveness */
     height: 250px;
     object-fit: contain;
     border-radius: 8px;
@@ -40,13 +39,21 @@
     text-align: center;
     overflow: hidden; 
     text-overflow: ellipsis;
-    white-space: nowrap; 
+    white-space: nowrap; /* Prevent text wrapping */
     width: 100%; 
+}
+
+.item-description {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .item-prices {
     padding: 5px;
     display: flex;
+    justify-content: center;
     gap: 10px; /* Adjusted gap for better alignment */
     width: 100%;
 }
@@ -64,26 +71,18 @@
     text-decoration: line-through;
 }
 
-.item-details h3 {
-    padding-bottom: 10px;
-    margin: 0;
-}
-
 .item-buttons {
     padding-top: 5px;
     display: flex;
     gap: 10px; /* Adjusted gap for better alignment */
-
-
     justify-content: center;
     width: 100%;
-    bottom: 15px;
 }
 
 .add-to-cart-btn {
     position: relative;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 20px; /* Adjusted padding for better alignment */
     font-weight: bold;
     color: white;
     background: linear-gradient(45deg, #2196F3, #0D47A1);
@@ -99,9 +98,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+    width: 40px; /* Adjusted width for better alignment */
+    height: 40px; /* Adjusted height for better alignment */
+    font-size: 20px;
     background: linear-gradient(45deg, #00BFFF, #0056b3);
     color: white;
     border: none;
@@ -130,4 +129,75 @@
 .add-to-wishlist-btn:active {
     transform: scale(0.9);
     box-shadow: 0 0 5px rgba(0, 191, 255, 0.6);
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .item {
+        width: 100%; /* Adjusted width for better responsiveness */
+        max-width: 100%; /* Adjusted max-width for better responsiveness */
+        height: auto;
+        padding: 10px; /* Adjusted padding for better alignment */
+    }
+
+    .item img {
+        width: 100%; /* Adjusted width for better responsiveness */
+        height: auto;
+    }
+
+    .item-name {
+        font-size: 16px; /* Adjusted font size for better readability */
+    }
+
+    .item-description {
+        font-size: 12px; /* Adjusted font size for better readability */
+    }
+
+    .item-price-new,
+    .item-price-old {
+        font-size: 16px; /* Adjusted font size for better readability */
+    }
+
+    .add-to-cart-btn,
+    .add-to-wishlist-btn {
+        padding: 8px 20px; /* Adjusted padding for better alignment */
+        font-size: 14px; /* Adjusted font size for better readability */
+    }
+
+    .add-to-wishlist-btn {
+        width: 35px; /* Adjusted width for better alignment */
+        height: 35px; /* Adjusted height for better alignment */
+        font-size: 18px; /* Adjusted font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        padding: 5px; /* Adjusted padding for better alignment */
+    }
+
+    .item-name {
+        font-size: 14px; /* Adjusted font size for better readability */
+    }
+
+    .item-description {
+        font-size: 10px; /* Adjusted font size for better readability */
+    }
+
+    .item-price-new,
+    .item-price-old {
+        font-size: 14px; /* Adjusted font size for better readability */
+    }
+
+    .add-to-cart-btn,
+    .add-to-wishlist-btn {
+        padding: 6px 15px; /* Adjusted padding for better alignment */
+        font-size: 12px; /* Adjusted font size for better readability */
+    }
+
+    .add-to-wishlist-btn {
+        width: 30px; /* Adjusted width for better alignment */
+        height: 30px; /* Adjusted height for better alignment */
+        font-size: 16px; /* Adjusted font size for better readability */
+    }
 }

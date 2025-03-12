@@ -21,43 +21,48 @@ let all_product = [
   },
   {
       id: 2,
-      name: "Pets Empire Stainless Steel Dog Bowl, Dog Food Bowl, Dog Feeding Bowl, Medium (Set of 2 x 700ml)",
+      name: "Pets Empire Stainless Steel Dog Bowl",
       category: "Dog",
       image: p2_img,
       new_price: 149,
-      old_price: 798
+      old_price: 798,
+      description:"Dog Food Bowl, Dog Feeding Bowl, Medium (Set of 2 x 700ml)"
   },
   {
       id: 3,
-      name: "Aufew Magic Pet Grooming Gloves Dog Bathing Scrubber Gloves, Heat Resistant Eco-Friendly Silicone Hair Removal Gloves with High Density Teeth for Cats, Dogs, 2 Piece",
+      name: "Aufew Magic Pet Grooming Gloves Dog Bathing Scrubber Gloves",
       category: "Dog & Cat",
       image: p3_img,
       new_price: 220,
-      old_price: 1459
+      old_price: 1459,
+      description:"Heat Resistant Eco-Friendly Silicone Hair Removal Gloves with High Density Teeth for Cats, Dogs, 2 Piece"
   },
   {
       id: 4,
-      name: "Agirav No Pull Dog Harness - Step In Dog Harness And Leash For Small Medium Large Dog - Escape Proof Adjustable Soft Leash Collar Set For Walking Training Hiking Outdoor, 15 Cm, 15 Cm",
+      name: "Agirav No Pull Dog Harness",
       category: "Dog",
       image: p4_img,
       new_price: 149,
-      old_price: 999
+      old_price: 999,
+      description:"Step In Dog Harness And Leash For Small Medium Large Dog - Escape Proof Adjustable Soft Leash Collar Set For Walking Training Hiking Outdoor, 15 Cm, 15 Cm"
   },
   {
       id: 5,
-      name: "Foodie Puppies Latex Rubber Squeaky Dog Chew Ball Toy - (Claw Ball, Small) Durable and Safe Fetch Teething Dog Toy for Puppies and Small to Medium Dogs, Paw Design Helps to Clean Teeth (Diameter, 6cm)",
+      name: "Foodie Puppies Latex Rubber Squeaky Dog Chew Ball Toy",
       category: "Dog & Cat",
       image: p5_img,
       new_price: 180,
-      old_price: 399
+      old_price: 399,
+      description:"(Claw Ball, Small) Durable and Safe Fetch Teething Dog Toy for Puppies and Small to Medium Dogs, Paw Design Helps to Clean Teeth (Diameter, 6cm)"
   },
   {
       id: 6,
-      name: "Amazon Basics Self Cleaning Slicker Pet Grooming Brush | Pet Cleaning Tool Suitable for All Pets | Rectangular Shape",
+      name: "Amazon Basics Self Cleaning Slicker Pet Grooming Brush",
       category: "Dog, Cat & Rabbit",
       image: p6_img,
       new_price: 199,
-      old_price: 520
+      old_price: 520,
+      description:"Pet Cleaning Tool Suitable for All Pets | Rectangular Shape"
   },
   {
       id: 7,

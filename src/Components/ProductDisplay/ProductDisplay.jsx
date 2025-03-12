@@ -44,7 +44,7 @@ export const ProductDisplay = ({ product }) => {
           <h1>Select Quantity</h1>
         </div>
         <button onClick={() => { addToCart(product.id) }}>ADD TO CART</button>
-        <p className='productdisplay-right-categary'><span>Category :</span>Pets, Foods, Toys</p>
+        <p className='productdisplay-right-categary'><span>Category :</span>{product.category}</p>
         <p className='productdisplay-right-categary'><span>Tag :</span>Latest products</p>
       </div>
     </div>
