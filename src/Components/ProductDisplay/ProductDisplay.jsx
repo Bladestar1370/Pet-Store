@@ -38,14 +38,14 @@ export const ProductDisplay = ({ product }) => {
           <div className="productdisplay-right-price-new">${product.new_price}</div>
         </div>
         <div className="productdisplay-right-description">
-          A lightweight, usually knitted, good quality product.
+          {product.description}
         </div>
         <div className="productdisplay-right-size">
           <h1>Select Quantity</h1>
         </div>
         <button onClick={() => { addToCart(product.id) }}>ADD TO CART</button>
-        <p className='productdisplay-right-categary'><span>Category :</span>{product.category}</p>
-        <p className='productdisplay-right-categary'><span>Tag :</span>Latest products</p>
+        <p className='productdisplay-right-category'><span>Category :</span>{product.category}</p>
+        <p className='productdisplay-right-category'><span>Tag :</span>Latest products</p>
       </div>
     </div>
   );
