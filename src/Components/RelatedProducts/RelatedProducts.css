@@ -26,6 +26,7 @@
     justify-content: center;
     gap: 20px;
     
+<<<<<<< HEAD
 }
 
 @media (max-width: 1024px) {
@@ -69,4 +70,6 @@
         grid-template-columns: 1fr 1fr;
         gap:2px;
     }
+=======
+>>>>>>> 08a7be888493e252335cf20c8f5121f3e1ff0a3f
 }

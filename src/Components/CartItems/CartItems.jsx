@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useContext } from "react"; // Import useContext from React
 import "./CartItems.css";
 import { ShopContext } from "../CartContext/ShopContext";
@@ -9,6 +10,18 @@ export const CartItems = () => {
 
   return (
     <div className="cartitems">
+=======
+import React, { useContext } from 'react'; // Import useContext from React
+import './CartItems.css';
+import { ShopContext } from '../CartContext/ShopContext';
+import cart_cross_icon from '../Assets/cart_cross_icon.png';
+
+export const CartItems = () => {
+  const { getTotalCartAmount,all_products, cartItems, removeFromCart } = useContext(ShopContext);
+
+  return (
+    <div className='cartitems'>
+>>>>>>> 08a7be888493e252335cf20c8f5121f3e1ff0a3f
       <div className="cartitem-format-main">
         <p>Products</p>
         <p>Title</p>
@@ -21,6 +34,7 @@ export const CartItems = () => {
       {all_products.map((product) => {
         if (cartItems[product.id] > 0) {
           return (
+<<<<<<< HEAD
             <div>
               <div
                 key={product.id}
@@ -45,6 +59,15 @@ export const CartItems = () => {
                 />
               </div>
               <hr />
+=======
+            <div key={product.id} className='cartitem-format cartitem-format-main'>
+              <img src={product.image} alt={product.name} className='carticon-product-icon' />
+              <p>{product.name}</p>
+              <p>${product.new_price}</p>
+              <button className='cartitem-quantity'>{cartItems[product.id]}</button>
+              <p>${(product.new_price * cartItems[product.id])}</p>
+              <img className='carticon-remove-icon' src={cart_cross_icon} alt='Remove' onClick={() => removeFromCart(product.id)} />
+>>>>>>> 08a7be888493e252335cf20c8f5121f3e1ff0a3f
             </div>
           );
         }
@@ -52,6 +75,7 @@ export const CartItems = () => {
       })}
       <div className="cartitems-down">
         <div className="cartitems-total">
+<<<<<<< HEAD
           <h1>Cart Totals</h1>
           <div>
             <div className="cartitems-total-items">
@@ -77,6 +101,33 @@ export const CartItems = () => {
             <input type="text" placeholder="promo code" />
             <button>Submit</button>
           </div>
+=======
+            <h1>Cart Totals</h1>
+            <div>
+            <div className="cartitems-total-items">
+                <p>Subtotal</p>
+                <p>${(getTotalCartAmount())}</p>
+            </div>
+            <hr />
+            <div className="cartitems-total-items">
+                <p>Shipping Fee</p>
+                <p>Free</p>
+            </div>
+            <hr />
+            <div className="cartitems-total-items">
+                <h3>Total</h3>
+                <h3>${getTotalCartAmount()}</h3>
+            </div>
+            </div>
+            <button>PROCEED TO CHECKOUT</button>
+        </div>
+        <div className="cartitems-promocode">
+            <p>If you have a promo code, enter it here:</p>
+            <div className="cartitems-promobox">
+                <input type="text" placeholder='promo code' />
+                <button>Submit</button>
+            </div>
+>>>>>>> 08a7be888493e252335cf20c8f5121f3e1ff0a3f
         </div>
       </div>
     </div>
@@ -84,3 +135,7 @@ export const CartItems = () => {
 };
 
 export default CartItems;
+<<<<<<< HEAD
+=======
+       
+>>>>>>> 08a7be888493e252335cf20c8f5121f3e1ff0a3f
