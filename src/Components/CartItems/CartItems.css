@@ -57,11 +57,11 @@
     gap: 40px;
 }
 
-<<<<<<< HEAD
-.cartitems-total-items {
-=======
+
+
+
 .cartitems-total-item {
->>>>>>> 08a7be888493e252335cf20c8f5121f3e1ff0a3f
+
     display: flex;
     justify-content: space-between;
     padding: 15px 0px;
@@ -118,7 +118,7 @@
     cursor: pointer;
     margin-left: 10px; /* Optional: Add margin for spacing */
 }
-<<<<<<< HEAD
+
 
 @media (max-width: 1280px) {
     .cartitems {
@@ -176,5 +176,3 @@
         display: grid;
     }
 }
-=======
->>>>>>> 08a7be888493e252335cf20c8f5121f3e1ff0a3f
